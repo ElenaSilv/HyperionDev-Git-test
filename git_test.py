@@ -19,17 +19,6 @@ simple_interest = "simple"
 compound_interest = "compound"
 
 
-# home loan repayment calculator 
-
-elif user_choice == bond:
-    house_value = int(input("Please tell us the present value of your house: "))
-    interest_percentage = int(input("Please tell us the percentage of the interest rate (no symbols): "))/100
-    months = int(input("How many months will you need to repay the bond? "))
-    
-    print((interest_percentage/12 * house_value)/(1 - (1 + interest_percentage/12)**(-months)))
-
-else:
-    print("Please start again and choose either 'investment' or 'bond.")
 # Investment calculator 
 
 if user_choice == investment:
@@ -44,3 +33,17 @@ if user_choice == investment:
         print(deposit * math.pow((1+interest_percentage),years))
     else:
         print("Please start again and choose either 'simple' or 'compound.")
+
+
+
+# home loan repayment calculator 
+
+elif user_choice == bond:
+    house_value = int(input("Please tell us the present value of your house: "))
+    interest_percentage = int(input("Please tell us the percentage of the interest rate (no symbols): "))/100
+    months = int(input("How many months will you need to repay the bond? "))
+    
+    print((interest_percentage/12 * house_value)/(1 - (1 + interest_percentage/12)**(-months)))
+
+else:
+    print("Please start again and choose either 'investment' or 'bond.")
